@@ -28,3 +28,8 @@ RUN rm $HOME/bin/aws-glue-libs/jarsv1/netty-all-4.0.23.Final.jar && \
 
 ENV SPARK_CONF_DIR=$HOME/bin/aws-glue-libs/conf
 ENV PYTHONPATH=${SPARK_HOME}python/:${SPARK_HOME}python/lib/py4j-0.10.7-src.zip:$HOME/bin/aws-glue-libs/PyGlue.zip:${PYTHONPATH}
+
+COPY ./jars/. /home/jovyan/bin/aws-glue-libs/jarsv1/ 
+
+# install psycopg2 to run queries on the database if needed
+RUN pip install psycopg2-binary -t  . && mv psycopg2 /usr/local/spark/python

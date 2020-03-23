@@ -1,0 +1,6 @@
+jars/*
+!jars/readme.md
+.*
+!.gitignore
+target/*
+!target/example.ipynb

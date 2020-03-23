@@ -9,3 +9,5 @@ https://support.wharton.upenn.edu/help/glue-debugging
 
 servlet conflict issue reference:
 https://ileriseviye.wordpress.com/2014/12/04/how-to-fix-class-javax-servlet-filterregistrations-signer-information-does-not-match-signer-information-of-other-classes-in-the-same-package-when-unit-testing-with-spark-streaming/
+
+Extra jars/ jdbc drivers placed in jars directory
